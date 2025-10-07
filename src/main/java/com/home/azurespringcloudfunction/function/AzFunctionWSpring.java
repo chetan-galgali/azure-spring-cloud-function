@@ -32,7 +32,7 @@ public class AzFunctionWSpring {
 
 		// Use plain Spring Beans.
 		return request.createResponseBuilder(HttpStatus.OK)
-				.body(uppercase.apply(request.getBody().orElse("Hello World")))
+				.body(uppercase.apply(request.getBody().orElse("Hello World 1234")))
 				.header("Content-Type", "application/json")
 				.build();
 	}
