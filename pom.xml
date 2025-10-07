@@ -32,15 +32,16 @@
 		<spring-boot-thin-layout.version>1.0.28.RELEASE</spring-boot-thin-layout.version>
 		<azure-spring-could.version>6.0.0</azure-spring-could.version>
 		<!-- Spring Boot start class. WARNING: correct class must be set -->
-<!--		<start-class>com.home.azurespringcloudfunction.AzureFunctionApp</start-class>-->
+		<start-class>com.home.azurespringcloudfunction.AzureFunctionApp</start-class>
 
 		<!-- customize those properties. WARNING: the functionAppName should be unique across Azure -->
 		<azure.functions.maven.plugin.version>1.22.0</azure.functions.maven.plugin.version>
-		<functionResourceGroup>my-spring-function-resource-group</functionResourceGroup>
-		<functionAppServicePlanName>my-spring-function-service-plan</functionAppServicePlanName>
-		<functionAppName>my-spring-function</functionAppName>
-		<functionPricingTier>Y1</functionPricingTier>
+		<functionResourceGroup>wink-logic-app-learn</functionResourceGroup>
+		<functionAppServicePlanName>ASP-springgrpc-b3cf</functionAppServicePlanName>
+		<functionAppName>wink-logic-app-function-java</functionAppName>
+		<functionPricingTier>P1V2</functionPricingTier>
 		<functionAppRegion>eastus</functionAppRegion>
+		<functionAppServicePlanResourceGroup>spring-grpc</functionAppServicePlanResourceGroup>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -69,6 +70,7 @@
 					<region>${functionAppRegion}</region>
 					<appServicePlanName>${functionAppServicePlanName}</appServicePlanName>
 					<pricingTier>${functionPricingTier}</pricingTier>
+					<appServicePlanResourceGroup>${functionAppServicePlanResourceGroup}</appServicePlanResourceGroup>
 
 					<hostJson>${project.basedir}/src/main/resources/host.json</hostJson>
 					<localSettingsJson>${project.basedir}/src/main/resources/local.settings.json</localSettingsJson>
